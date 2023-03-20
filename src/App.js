@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from 'react-router-dom' 
+import AllStars from './components/AllStars';
+import Star from './components/Star'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Dev Environment</h1>
+      <Routes>
+        <Route path="/" element={<AllStars />} />
+        <Route path="/star/:toi" element={<Star />} />
+      </Routes>
     </div>
+
   );
 }
 
